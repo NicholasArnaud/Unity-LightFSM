@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class LightStatePattern : MonoBehaviour {
     public float timer = 5;
-
-
+    
     [HideInInspector]
     public ILightStates currentState;
     public GreenLight greenLight;
@@ -39,7 +38,6 @@ public class LightStatePattern : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         rend.material.color = Color.black;
-        
         currentState.UpdateState();
 	}
 }
